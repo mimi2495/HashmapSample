@@ -1,0 +1,27 @@
+package com.company;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+    //HASHMAPS <KEY ----> VALUE>
+
+        HashMap users = new HashMap();
+        users.put("Myla", 23);
+        users.put("Aubs", 21);
+        users.put("Stella", 11);
+//        users.remove("Aubs");
+
+        Iterator iterator = users.entrySet().iterator();
+        while(iterator.hasNext()){
+            Map.Entry pair = (Map.Entry) iterator.next();
+            System.out.println("Name : "+pair.getKey() + "\n Age : "+ pair.getValue());
+        }
+//        System.out.println(users.get("Stella"));
+//        System.out.println(users.entrySet());
+    }
+}
